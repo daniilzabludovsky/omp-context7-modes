@@ -100,6 +100,8 @@ bun run typecheck
 
 Tests isolate settings in temporary directories and exercise all modes, exact trigger boundaries, non-sticky turns, duplicate prevention, policy preservation, command validation, persistence after reload, invalid settings, and save failures. Development dependencies provide the matching OMP types; the plugin has no install scripts or runtime dependency bundle.
 
+The native integration test uses OMP's real extension loader, hook runner, and command context to check mode behavior and persistence. It makes no model requests or Context7 network calls.
+
 Before publishing, run the checks above, inspect `npm pack --dry-run`, and ensure `index.ts`, `package.json`, `README.md`, and `LICENSE` are present. The GitHub install command requires a publicly reachable repository containing those files; preparing a local checkout alone does not publish it.
 
 ## License
